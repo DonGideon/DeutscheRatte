@@ -15,7 +15,7 @@ async function scrapeTable() {
 
   const rows = table.find('tr')
 
-  const articlesAndNouns = {}
+  const articlesAndNouns = []
 
   for (const row of rows) {
     const secondColumn = $(row).find('td:nth-child(3)')
@@ -23,10 +23,11 @@ async function scrapeTable() {
     const cleanArticleAndNoun = secondColumn.text().replace(/[^a-zA-Z\s]/g, '').trim() //remove all emojis and new lines 
 
     if (!!cleanArticleAndNoun) { // 'article noun'
-        const articleAndNounArr = cleanArticleAndNoun.split(' ') // [article, noun]
-        articlesAndNouns[articleAndNounArr[0]] = articleAndNounArr[1]
+        articlesAndNouns.push(cleanArticleAndNoun.split(' ')) // [[article, noun], // [article, noun]]
     }
   }
 
   return articlesAndNouns
 }
+
+module.exports = {scrapeTable}

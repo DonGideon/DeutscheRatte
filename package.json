@@ -1,0 +1,15 @@
+{
+  "name": "deutsche-ratte",
+  "version": "1.0.0",
+  "description": "Telegram bot testing German articles ",
+  "main": "src/app.js",
+  "author": "Don",
+  "license": "MIT",
+  "scripts": {
+    "start": "node .",
+    "scrape": "node 'src/tools/scrape-table.js'"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.12"
+  }
+}

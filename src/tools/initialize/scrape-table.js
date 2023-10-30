@@ -20,7 +20,7 @@ async function scrapeTable() {
   for (const row of rows) {
     const secondColumn = $(row).find('td:nth-child(3)')
 
-    const cleanArticleAndNoun = secondColumn.text().replace(/[^a-zA-Z\s]/g, '').trim() //remove all emojis and new lines 
+    const cleanArticleAndNoun = secondColumn.text().replace(/[^a-zA-ZÄÖÜäöüß\s]/g, '').trim() //remove all emojis and new lines 
 
     if (!!cleanArticleAndNoun) { // 'article noun'
         articlesAndNouns.push(cleanArticleAndNoun.split(' ')) // [[article, noun], // [article, noun]]

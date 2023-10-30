@@ -15,7 +15,7 @@ Learn German articles with simple game using this Telegram bot built with Node.j
 
 ## Introduction
 
-The German Article Learning Bot is designed to make learning German articles entertaining and easy. All whithout using external "black box" packages, with an easy to understand code and many opportunities to add more features.
+DEUTSCHE RATTE, Telegram Bot that designed to make learning German articles entertaining and easy. All whithout using external "black box" packages, with an easy to understand code and many opportunities to add more features.
 
 ## Features
 

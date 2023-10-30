@@ -11,7 +11,7 @@ const sendResponse = (requestBody, responseLogic) => {
             parse_mode: 'markdown'
         }),
         headers: {
-        "Content-type": "application/json; charset=UTF-8"
+            "Content-type": "application/json; charset=UTF-8"
         }
     })
 }
@@ -21,10 +21,10 @@ const runServer = (responseLogic) => {
         res.writeHead(200, {'Content-Type': 'application/json'})
         let body = ''
         request.on('data', function(data) {
-        body += data
+            body += data
         })
         request.on('end', function() {
-        sendResponse(body, responseLogic)
+            sendResponse(body, responseLogic)
         })
         res.end()
     }).listen(8080)

@@ -4,8 +4,8 @@ const {responseLogic} = require('../logic')
 describe('responseLogic Function', () => {
     const mockedRequestBody = JSON.stringify({
         message: {
-        text: 'textValueToReplace',
-        chat: { id: 123 },
+            text: 'textValueToReplace',
+            chat: { id: 123 },
         },
     })
 

@@ -1,8 +1,10 @@
+require('dotenv').config()
 const http = require('http')
+const token = process.env.TELEGRAM_TOKEN
 
 const sendResponse = (requestBody, responseLogic) => {
     const responseBody = responseLogic(requestBody)
-    fetch("https://api.telegram.org/botTOKEN/sendMessage", {
+    fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
         method: "POST",
         body: JSON.stringify({
             ...responseBody,
@@ -22,7 +24,6 @@ const runServer = (responseLogic) => {
         body += data
         })
         request.on('end', function() {
-        console.log('Body: ' + body)
         sendResponse(body, responseLogic)
         })
         res.end()

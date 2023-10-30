@@ -1,4 +1,4 @@
-const { getCurrentQuestion, getPreviosAnswer, checkCurrentQuestion, getSummary } = require('./bodyCreator')
+const { getCurrentQuestion, getPreviosAnswer, checkCurrentQuestion, getSummary } = require('../bodyCreator')
 
 describe('getCurrentQuestion', () => {
     it('should return the correct current question', () => {

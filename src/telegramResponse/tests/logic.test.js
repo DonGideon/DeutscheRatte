@@ -1,5 +1,5 @@
 
-const {responseLogic} = require('./logic')
+const {responseLogic} = require('../logic')
   
 describe('responseLogic Function', () => {
     const mockedRequestBody = JSON.stringify({

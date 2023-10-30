@@ -1,4 +1,5 @@
 const fs = require('fs')
+const path = require('path')
 
 const createDBTable = (articlesAndNouns) => {
     fs.writeFile('./src/tools/db/articlesAndNouns.json', JSON.stringify(articlesAndNouns), (err) => {
@@ -8,12 +9,9 @@ const createDBTable = (articlesAndNouns) => {
 }
 
 const getRandomValue = () => {
-    fs.readFile('./src/tools/db/articlesAndNouns.json', (err, JsonArticlesAndNouns) => {
-        if (err) throw err;
-      
-        const articlesAndNouns = JSON.parse(JsonArticlesAndNouns);
-        return articlesAndNouns[Math.floor(Math.random() * months.length)]
-      })
+    const filePath = path.join(__dirname, 'articlesAndNouns.json')
+    const potato = require(filePath)
+    return potato[Math.floor(Math.random() * potato.length)]
 }
 
 module.exports = {createDBTable, getRandomValue}

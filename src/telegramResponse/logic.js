@@ -57,7 +57,7 @@ const responseLogic = (requestBody) => {
         responseBody.reply_markup = keyboard
     } else if (userText == '🐀') { // ❤️
         responseBody.text = "❤️"
-    } else { // sugest to start the game
+    } else { // suggest to start the game
         responseBody.text = "Press 's' to start 🐀"
     }
 

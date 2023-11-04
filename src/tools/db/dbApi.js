@@ -10,8 +10,8 @@ const createDBTable = (articlesAndNouns) => {
 
 const getRandomValue = () => {
     const filePath = path.join(__dirname, 'articlesAndNouns.json')
-    const potato = require(filePath)
-    return potato[Math.floor(Math.random() * potato.length)]
+    const articlesAndNounsData = require(filePath)
+    return articlesAndNounsData[Math.floor(Math.random() * articlesAndNounsData.length)]
 }
 
 module.exports = {createDBTable, getRandomValue}

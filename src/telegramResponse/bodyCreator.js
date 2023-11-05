@@ -18,7 +18,7 @@ const getCurrentQuestion = (questionsData) => {
     return currentQuestion
 }
 
-const getPreviosAnswer = (questionsData) => {
+const getPreviousAnswer = (questionsData) => {
     // [article, noun] => 'article noun'
     return questionsData.questions[questionsData['currentQuestionIndex']-1].join(' ')
 }
@@ -43,4 +43,4 @@ const getSummary = (questionsData) => {
     return summary
 }
 
-module.exports = {initQuestions, getCurrentQuestion, checkCurrentQuestion, getSummary, getPreviosAnswer}
+module.exports = {initQuestions, getCurrentQuestion, checkCurrentQuestion, getSummary, getPreviousAnswer}

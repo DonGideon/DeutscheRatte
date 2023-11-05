@@ -1,4 +1,4 @@
-const {initQuestions, getCurrentQuestion, checkCurrentQuestion, getPreviosAnswer, getSummary} = require('./bodyCreator')
+const {initQuestions, getCurrentQuestion, checkCurrentQuestion, getPreviousAnswer, getSummary} = require('./bodyCreator')
 
 const questionsData = {
     numOfQuestions: 10,
@@ -40,7 +40,7 @@ const responseLogic = (requestBody) => {
         questionsData.currentQuestionIndex <= questionsData.numOfQuestions) { // not after last round
         responseBody.text = checkCurrentQuestion(questionsData, userText)
         responseBody.text += " "
-        responseBody.text += getPreviosAnswer(questionsData)
+        responseBody.text += getPreviousAnswer(questionsData)
         responseBody.text += "\n\n"
         if (questionsData.currentQuestionIndex < questionsData.numOfQuestions) { // move to next round
             responseBody.text += `nächstes Wort: *${getCurrentQuestion(questionsData)}*`

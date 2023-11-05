@@ -15,7 +15,8 @@ Learn German articles with simple game using this Telegram bot built with Node.j
 
 ## Introduction
 
-DEUTSCHE RATTE, Telegram Bot that designed to make learning German articles entertaining and easy. All whithout using external "black box" packages, with an easy to understand code and many opportunities to add more features.
+DEUTSCHE RATTE, Telegram Bot that designed to make learning German articles entertaining and easy. All without using external "black box" packages, with an easy to understand code and many opportunities to add more features.  
+A much simpler, live version of the Bot can be used [here 🐀](https://t.me/DeutscheRatteBot)
 
 ## Features
 
@@ -42,13 +43,13 @@ Before you get started, ensure you have the following installed on your system:
 2. Add an `.env` file with `TELEGRAM_TOKEN={YourToken}`
 3. If using "ngrok", run in a terminal `ngrok http 8080` you will get `YourPublicURL`
 4. Open your web browser and type `https://api.telegram.org/bot{YourToken}/setWebhook?url={YourPublicURL}` 
-5. Open Terminal with the clone repository and `yarn srart`
+5. Open Terminal with the clone repository and `yarn start`
 6. Play
 
 ## Why
 
 1. Easy to understand
-2. Simplfy Telegram API
+2. Simplify Telegram API
 3. Includes a scraper
 4. Can be used locally
 5. Sit on the Toilet and learn Deutsch
